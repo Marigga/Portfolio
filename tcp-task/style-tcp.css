@@ -1,0 +1,166 @@
+/*top blue bar*/
+div.intro-bar {
+    background-color: #01A7E1;
+    color: white;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 8px 0px;
+    display: block;
+    font-size: 16px;
+}
+
+a.topbar-href {
+    text-decoration: none;
+}
+
+.topbar-ship-text {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.topbar-link-text {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/*top blue bar ends, three pic bar */
+
+div.top-fun-sun-tripic-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+
+div.tri-pic-button-container {
+    display: flex;
+    justify-content: center;
+    grid-auto-flow: row;
+    background-color: #53C4E9;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.lower-pic-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+}
+
+/*style for all buttons*/
+a.tri-pic-buttons,
+.lower-buttons {
+    position: relative;
+    cursor: pointer;
+    opacity: 1;
+    min-height: 50px;
+    letter-spacing: 0.93px;
+    min-width: 175px;
+    background: rgb(255, 255, 255);
+    color: rgb(74, 74, 74);
+    font-family: Nunito;
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 20px 20px;
+    margin: 10px;
+    font-size: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+
+/*change color on hover*/
+a.tri-pic-buttons:hover,
+.lower-buttons:hover {
+    background-color: rgb(232, 227, 227);
+    transition: 0.7s;
+}
+
+/*top three picture banner resize for 768px or less*/
+@media (max-width: 768px) {
+    div.top-fun-sun-tripic-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-pic {
+        display: flex;
+        order: 2;
+    }
+
+    #ad-pic {
+        display: flex;
+        order: 1;
+    }
+
+    #right-pic {
+        display: none;
+    }
+}
+
+/*top button grid resize on screens 768px or less*/
+@media (max-width: 768px) {
+    div.tri-pic-button-container {
+        display: grid;
+
+    }
+
+    #top-button1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #top-button2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    #top-button3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #top-button4 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    #top-button5 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+}
+
+/*radius on button edges*/
+@media (min-width: 768px) {
+
+    a.tri-pic-buttons,
+    .lower-buttons {
+        border-radius: 6px;
+        border-top-width: 1px;
+        white-space: normal;
+        width: 134px;
+    }
+}
+
+/* below is the button grid for the lower pic*/
+@media (max-width: 768px) {
+    .lower-pic-button-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
